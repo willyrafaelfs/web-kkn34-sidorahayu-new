@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+@theme {
+  /* Brand */
+  --color-primary: #0A3A40; /* Tema Gelap: Biru/Hijau Air Dalam */
+  --color-secondary: #06B6D4; /* Aksen: Biru Air Bersih (Cyan) */
+  --color-accent: #10B981; /* Aksen: Hijau Daun Segar (Emerald) */
+
+  /* Surface */
+  --color-surface: #F2FCF5; /* Tema Terang: Hijau Mint Sangat Muda */
+  --color-muted: #CFE4D5; /* Elemen redup / border subtle */
+
+  /* Text */
+  --color-text-primary: #0A3A40; /* Teks pada Mode Terang */
+  --color-text-invert: #E6FDF0; /* Teks cerah pada Mode Gelap */
+
+  /* Font */
+  --font-sans:
+    "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    width: 100vw;
+    max-width: 100%;
+  }
+
+  body {
+    font-family: inherit;
+    background-color: var(--color-primary);
+    color: var(--color-text-invert);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: none;
+
+    overflow-x: hidden;
+    overflow-y: auto; 
+    width: 100%;
+    position: relative;
+    
+    overscroll-behavior-x: none; 
+    touch-action: pan-y;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.rainbow::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  background-size: 50% 30%;
+  filter: blur(6px);
+  background-image: linear-gradient(#fff);
+  animation: rotate 3s linear infinite;
+}
+html:not(.dark) .rainbow::before {
+  background-image: linear-gradient(var(--color-primary));
+}
+
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marqueeScroll 30s linear infinite;
+}
+@media (pointer: coarse) {
+  #custom-cursor-container {
+    display: none !important;
+  }
+  body {
+    cursor: auto !important;
+  }
+}
