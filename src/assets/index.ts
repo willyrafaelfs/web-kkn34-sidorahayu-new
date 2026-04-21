@@ -326,10 +326,45 @@ export const teamData: TeamMember[] = [
     image: getTeamImg("PERKAP-BOMBANG LECA.png"),
     instagram: "bombangleca",
   },
+  {
+    name: "Yosua Domu Lindu Kambombu",
+    division: "Perkap",
+    image: getTeamImg("PERKAP-JHOSUA.png"),
+    instagram: "jhoossua_",
+  },
+  {
+    name: "NIKODEMUS JUAN KRISTIAN TAMO",
+    division: "Perkap",
+    image: getTeamImg("PERKAP-NIKODEMUS JUAN.png"),
+    instagram: "chrst_25",
+  },
+  {
+    name: "Yanuarius Sera karo ",
+    division: "Perkap",
+    image: getTeamImg("PERKAP-RIOND KARO.png"),
+    instagram: "riondkaro_",
+  },
 
 
   // ================= KONSUMSI =================
-
+  {
+    name: "Yanuaria Josi Dwinasari",
+    division: "Konsumsi (CO)",
+    image: getTeamImg("KONSUMSI-JHOSY RIKARLING.png"),
+    instagram: "jhosy_rikarling13",
+  },
+  {
+    name: "Yosefani Ristawati Mangol",
+    division: "Konsumsi",
+    image: getTeamImg("KONSUMSI-YOSEFANI RISTA.png"),
+    instagram: "ristawatyy",
+  },
+  {
+    name: "Yohanes Jehanu",
+    division: "Konsumsi",
+    image: getTeamImg("KONSUMSI-Yohanes Jehanu.png"),
+    instagram: "joo_9931",
+  },
 ];
 
 export default assets;
