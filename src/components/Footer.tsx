@@ -108,7 +108,7 @@ const Footer: React.FC<FooterProps> = ({ theme }) => {
           />
         </a>
         <a
-          href="https://github.com/willyrafaelfs/web-kkn34-sidorahayu-new"
+          href="https://github.com/willyrafaelfs"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:opacity-70 transition"
