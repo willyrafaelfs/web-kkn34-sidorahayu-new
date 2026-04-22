@@ -155,7 +155,7 @@ const Dokumentasi: React.FC<DokumentasiProps> = ({
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-5 min-h-100">
           {currentItems.map((item, index) => (
             <motion.div
-              key={item.id}
+              key={item.src}
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
