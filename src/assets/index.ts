@@ -148,7 +148,7 @@ export const carousel_data = [
       "Foto bersama Ibu-ibu PKK setelah pelaksanaan kegiatan sosialisasi mengenai apa itu hidroponik dan cara menanam sayuran dengan hidroponik",
   },
   {
-    image: getCarouselImg("fotbar_lokasi_hidroponik.jpg"),
+    image: getCarouselImg("fotbar_lokasi_hidroponik.jpeg"),
     title:
       "Foto bersama bapak dan ibu RT dilokasi hidroponik",
   },
