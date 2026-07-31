@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { Suspense, lazy, useState } from "react";
 import { motion } from "motion/react";
 import assets from "../assets";
 import Title from "./Title";
-import ThreeRenderer from "./ThreeRenderer";
+
+const ThreeRenderer = lazy(() => import("./ThreeRenderer"));
 
 type LuaranProps = {
   theme: "light" | "dark";
@@ -215,7 +216,15 @@ const Luaran: React.FC<LuaranProps> = ({
             {/* BODY (GLB atau Iframe) */}
             <div className="flex-1 w-full relative overflow-hidden bg-[#eeeeee]">
               {selectedItem.glbLink ? (
-                <ThreeRenderer modelPath={selectedItem.glbLink} />
+                <Suspense
+                  fallback={
+                    <div className="absolute inset-0 flex items-center justify-center text-sm text-neutral-500">
+                      Memuat model 3D...
+                    </div>
+                  }
+                >
+                  <ThreeRenderer modelPath={selectedItem.glbLink} />
+                </Suspense>
               ) : (
                 <iframe
                   src={

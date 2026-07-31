@@ -174,7 +174,7 @@ const Dokumentasi: React.FC<DokumentasiProps> = ({
               {item.type === "image" ? (
                 <img
                   src={item.src}
-                  loading="eager"
+                  loading="lazy"
                   decoding="async"
                   className="aspect-4/3 w-full object-cover"
                 />
@@ -182,7 +182,7 @@ const Dokumentasi: React.FC<DokumentasiProps> = ({
                 <div className="relative">
                   <video
                     src={item.src}
-                    preload="auto"
+                    preload="metadata"
                     className="aspect-4/3 w-full object-cover"
                     muted
                   />

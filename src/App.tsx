@@ -1,14 +1,15 @@
-import { useState, useRef, useEffect } from "react";
+import { Suspense, lazy, useState, useRef, useEffect } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
-import ProgramKerja from "./components/ProgramKerja";
-import Teams from "./components/Teams";
-import Footer from "./components/Footer";
-import Dokumentasi from "./components/Dokumentasi";
-import SocialMedia from "./components/SocialMedia";
-import Luaran from "./components/Luaran";
+
+const ProgramKerja = lazy(() => import("./components/ProgramKerja"));
+const Teams = lazy(() => import("./components/Teams"));
+const Footer = lazy(() => import("./components/Footer"));
+const Dokumentasi = lazy(() => import("./components/Dokumentasi"));
+const SocialMedia = lazy(() => import("./components/SocialMedia"));
+const Luaran = lazy(() => import("./components/Luaran"));
 
 function App() {
   const [theme, setTheme] = useState<"light" | "dark">(() => {
@@ -78,20 +79,22 @@ function App() {
           setGlobalModalOpen={setIsModalOpen}
         />
         <About />
-        <Teams theme={theme} />
-        <ProgramKerja setGlobalModalOpen={setIsModalOpen} />
-        <Dokumentasi
-          theme={theme}
-          setGlobalModalOpen={setIsModalOpen}
-          setHideSocial={setHideSocial}
-        />
-        <SocialMedia hideContent={hideSocial} />
-        <Luaran
-          theme={theme}
-          setGlobalModalOpen={setIsModalOpen}
-          setHideFooter={setHideFooter}
-        />
-        {!hideFooter && <Footer theme={theme} />}
+        <Suspense fallback={null}>
+          <Teams theme={theme} />
+          <ProgramKerja setGlobalModalOpen={setIsModalOpen} />
+          <Dokumentasi
+            theme={theme}
+            setGlobalModalOpen={setIsModalOpen}
+            setHideSocial={setHideSocial}
+          />
+          <SocialMedia hideContent={hideSocial} />
+          <Luaran
+            theme={theme}
+            setGlobalModalOpen={setIsModalOpen}
+            setHideFooter={setHideFooter}
+          />
+          {!hideFooter && <Footer theme={theme} />}
+        </Suspense>
       </main>
       <Analytics />
       {/* FIXED CONTAINER KURSOR */}
