@@ -8,7 +8,6 @@ import CloseIcon from "../assets/icons/close";
 import close_icon from "./icons/close_icon.svg";
 import sun_icon from "./icons/sun_icon.svg";
 import moon_icon from "./icons/moon_icon.svg";
-import hero_img from "./images/hero_img.png";
 import unmer_logo from "./logos/unmer_logo.png";
 import lppm_logo from "./logos/lppm_logo.png";
 import logo_lppm from "./logos/logo_lppm.png";
@@ -90,7 +89,6 @@ const assets = {
   moon_icon,
   blogger_icon,
   blogger_icon_dark,
-  hero_img,
   instagram_icon,
   instagram_icon_footer,
   instagram_icon_footer_dark,
