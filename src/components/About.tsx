@@ -48,7 +48,11 @@ const About = () => {
               </h3>
 
               <p className="leading-relaxed text-sm sm:text-base md:text-lg">
-                Terwujudnya 
+                Terwujudnya masyarakat Desa Sidorahayu yang mandiri dan
+                berdaya melalui optimalisasi pemanfaatan lahan terbatas
+                berbasis teknologi hidroponik guna mendukung ketahanan
+                pangan dan kesejahteraan ekonomi keluarga secara
+                berkelanjutan.
               </p>
             </div>
           </div>
@@ -78,6 +82,9 @@ const About = () => {
               <ul className="space-y-3">
                 {[
                   "Melakukan pemberdayaan masyarakat melalui program-program yang berkelanjutan.",
+                  "Meningkatkan pengetahuan dan keterampilan masyarakat, khususnya ibu-ibu PKK, dalam penerapan teknologi hidroponik sebagai solusi pemanfaatan lahan terbatas.",
+                  "Mendorong terciptanya ketahanan pangan keluarga melalui budidaya tanaman secara mandiri dan ramah lingkungan.",
+                  "Membangun kolaborasi aktif antara mahasiswa, pemerintah desa, dan masyarakat dalam mewujudkan program kerja yang berdampak nyata dan berkelanjutan.",
                 ].map((item, index) => (
                   <li key={index} className="flex gap-4">
                     <span

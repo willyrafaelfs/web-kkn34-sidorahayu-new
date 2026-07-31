@@ -11,7 +11,7 @@ const articles: Article[] = [
   {
     thumbnail: assets.thumb_blog3,
     title:
-      "",
+      "Peduli Lingkungan: Tim KKN Universitas Merdeka Malang Kembangkan Hidroponik di Desa Sidorahayu",
     link: "https://kkn34sidorahayuunmer2026.blogspot.com/2026/02/peduli-lingkungan-tim-kkn-universitas.html",
   },
 ];
